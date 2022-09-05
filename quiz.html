@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <title>Quiz</title>
+	<script type="text/javascript">
+	function getResults() {
+
+  var pontuacao = 0;
+var resultado;
+
+// For para 10 questões
+  for(var i = 1; i <= 10; i++) {
+    var radiosName = document.getElementsByName('answer'+i);
+
+//Não importa a quantidade de botões em cada questão
+    for(var j = 0; j < radiosName.length; j++) {
+      var radiosValue = radiosName[j];
+      if(radiosValue.checked) {
+        pontuacao+=parseInt(radiosValue.value);
+      }
+    }
+  }
+  
+  if(pontuacao<5){
+resultado = "Você come pouco";
+}else if(pontuacao<10){
+resultado = "Normal";
+}else{
+resultado = "Você come muito";
+}
+  
+document.getElementById('results').innerHTML =
+"Resultado " + resultado;
+
+}
+</script>
+	
+	
+  </head>
+  <body>
+    <h1 id="main-h">Qual Barbie você é?</h1>
+    <h2 id="questions-h">Perguntas</h2>
+
+    <p class="questions" id="question1">
+      1- Qual sua cor favorita?</p>
+    <input type="radio" name="answer1" value="1">Rosa
+    <input type="radio" name="answer1" value="5">Roxo
+    <input type="radio" name="answer1" value="10">Azul
+    <input type="radio" name="answer1" value="10">Preto
+    <input type="radio" name="answer1" value="10">Laranja
+    <hr>
+
+    <p class="questions" id="question2">
+      2- Em uma discussão como você age?</p>
+    <input type="radio" name="answer2" value="1">Tenho bons argumentos mas não sei me expressar
+    <input type="radio" name="answer2" value="5">Evito participar mas quando participo falo a coisa certa
+    <input type="radio" name="answer2" value="10">Não entro na discussão
+    <input type="radio" name="answer2" value="10">Tento sempre defender meu ponto de vista 
+    <input type="radio" name="answer2" value="10">Me exalto e perco a paciência
+    <hr>
+
+    <p class="questions" id="question3">
+      3- Como você age na frente do crush?</p>
+    <input type="radio" name="answer3" value="1">Fico tímida
+    <input type="radio" name="answer3" value="5">Ajo de maneira boba, brincalhona
+    <input type="radio" name="answer3" value="10">Tento nã demonstrar sentimentos, emoções
+    <input type="radio" name="answer2" value="10">Fico nervosa, sem saber o que agir
+    <input type="radio" name="answer2" value="10">Fico ansiosa, esperando algo acontecer
+    <hr>
+
+ <p class="questions" id="question4">
+      4- As pessoas conseguem te aborrercer facilmente?</p>
+    <input type="radio" name="answer4" value="1">Sim mas não expresso isso
+    <input type="radio" name="answer4" value="5">Sim mas me isolo para não entrar em conflito
+    <input type="radio" name="answer4" value="10">Não, é bem difícil me aborrecer 
+    <input type="radio" name="answer4" value="10">Sim, muito facilmente
+    <input type="radio" name="answer4" value="10">Depende do meu humor
+    <hr>
+
+<p class="questions" id="question5">
+      5- Como me comporto quando estou sendo cobrado ou pressionado?
+    <input type="radio" name="answer5" value="1">Choro
+    <input type="radio" name="answer5" value="5">Fico irritada, não sei lidar muito bem com a pressão
+    <input type="radio" name="answer5" value="10">Mantenho a calma e procuro uma solução definitiva
+    <input type="radio" name="answer5" value="10">Ignoro e continuo a vida
+    <input type="radio" name="answer5" value="10">Não sei lidar, não penso direito sob pressão
+    <hr>
+
+<p class="questions" id="question6">
+      6- Quando conheço uma pessoa nova e ela me interessa, o que mais me chama atenção?</p>
+    <input type="radio" name="answer6" value="1">Como ela me trata, seu jeito de agir e seus princípios
+    <input type="radio" name="answer6" value="5">Eu simplesmente simpatizo com a pessoa e quando me sinto confortável tento aprofundar o relacionamento
+    <input type="radio" name="answer6" value="10">Seu jeito de ver o mundo e sua personalidade
+    <input type="radio" name="answer6" value="10">O jeito como ela me trata com exclusividade
+    <input type="radio" name="answer6" value="10">Atitude e modo de agir
+    <hr>
+
+<p class="questions" id="question7">
+      7- Quando acontece uma história engraçada, como eu conto?</p>
+    <input type="radio" name="answer7" value="1">De forma natural tentando evidenciar os melhores pontos da história
+    <input type="radio" name="answer7" value="5">Tento contar mas acabo rindo mais do que contanto
+    <input type="radio" name="answer7" value="10">Deixando a história cada vez mais engraçada
+    <input type="radio" name="answer7" value="10">Geralmente não conto, mas quando conto imagino ela cada vez mais engraçada
+    <input type="radio" name="answer7" value="10">Conto rindo muito
+    <hr>
+
+<p class="questions" id="question8">
+      8- De modo geral, você evita oy não gosta de:</p>
+    <input type="radio" name="answer8" value="1">Brigas
+    <input type="radio" name="answer8" value="5">Conversar quand estou estressado
+    <input type="radio" name="answer8" value="10">Pensar demais
+    <input type="radio" name="answer8" value="10">Lidar com problemas que não me envolvem
+    <input type="radio" name="answer8" value="10">Mentiras
+    <hr>
+
+<p class="questions" id="question6">
+      9- Qual seu estilo muiscal favorito?</p>
+    <input type="radio" name="answer9" value="1">MBP
+    <input type="radio" name="answer9" value="5">K-POP
+    <input type="radio" name="answer9" value="10">POP
+    <input type="radio" name="answer9" value="10">Rap acústico
+    <input type="radio" name="answer9" value="10">Funk
+    <hr>
+
+<p class="questions" id="question10">
+      10- Como você age diante dos seus sonhos?</p>
+    <input type="radio" name="answer10" value="1">Busco realizá-los de forma leve
+    <input type="radio" name="answer10" value="5">Procuro a melhor maneira para realizá-los
+    <input type="radio" name="answer10" value="10">Tento avançar um pouco a cada dia
+    <input type="radio" name="answer10" value="10">Corro atrás respeitando meu tempo
+    <input type="radio" name="answer10" value="10">Não tenho um objetivo concreto para não me frustrar.
+    <hr>
+
+
+    <br>
+    <br>
+
+    <button class="submit" onclick="return getResults();" type="submit">
+      Veja sua nota!!!</button>
+
+  <h2 id="results-h">Resultado</h2>
+  <p id="results"></p>
+
+
+  
+  </body>
+</html>
+
